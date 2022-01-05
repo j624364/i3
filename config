@@ -223,8 +223,10 @@ bindsym F1 exec ~/.config/i3/scripts/keyhint-2
 # bindsym $mod+F1 exec xed ~/.config/i3/keybindings
 
 # Backlight control
-bindsym XF86MonBrightnessUp exec xbacklight +10
-bindsym XF86MonBrightnessDown exec xbacklight -10
+# bindsym XF86MonBrightnessUp exec xbacklight +10
+# bindsym XF86MonBrightnessDown exec xbacklight -10
+bindsym XF86MonBrightnessUp exec ~/Repos/BLight/bin/Release/net6.0/BLight inc
+bindsym XF86MonBrightnessDown exec ~/Repos/BLight/bin/Release/net6.0/BLight dec
 
 # change focus
 bindsym $mod+j focus left
