@@ -382,7 +382,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id dex --autostart --environment i3
 
 # start welcome app
-#exec --no-startup-id sh /usr/share/endeavouros/scripts/welcome --startdelay=3 
+#exec --no-startup-id sh /usr/share/endeavouros/scripts/welcome --startdelay=3
 
 # num lock activated
 #exec --no-startup-id numlockx on
@@ -457,16 +457,17 @@ set $white			#ebdbb2
 set $black			#282828
 set $purple			#b16286
 set $darkgrey		#282828
+set $darkishgrey    #3c3836
 set $grey			#a89984
 set $mediumgrey		#a89984
 set $yellowbrown	#d79921
 
 # define colors for windows:
-#class		        	border		bground		text		indicator	child_border
-client.focused		    $lightblue	$darkblue	$white		$purple		$mediumgrey
-client.unfocused	    $darkblue	$darkblue	$grey		$purple		$darkgrey
-client.focused_inactive	$darkblue	$darkblue	$grey		$purple		$black
-client.urgent		    $urgentred	$urgentred	$white		$purple		$yellowbrown
+#class		        	border		bground		  text		indicator	child_border
+client.focused	        $lightblue  $darkishgrey  $white    $purple     $mediumgrey
+client.unfocused        $darkblue   $darkgrey     $grey	    $purple     $darkgrey
+client.focused_inactive $darkblue   $darkblue     $grey	    $purple     $black
+client.urgent           $urgentred  $urgentred    $white    $purple     $yellowbrown
 
 
 ############################################
