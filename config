@@ -477,11 +477,11 @@ set $inactive-text-color $nord5
 set $urgent-bg-color     $nord15
 
 # define colors for windows:
-#class		        	border		bground		  text		indicator	child_border
-client.focused          $accent-color           $accent-color           $bg-color               $nord7
-client.unfocused        $inactive-bg-color      $inactive-bg-color      $inactive-text-color    $nord7
-client.focused_inactive $inactive-bg-color      $inactive-bg-color      $inactive-text-color    $nord7
-client.urgent           $urgent-bg-color        $urgent-bg-color        $text-color             $nord7
+#class		        	border bg     txt    indicator child_border
+client.focused          $nord3 $nord3 $nord4 $nord0    $nord3
+client.unfocused        $nord3 $nord1 $nord4 $nord0    $nord3
+client.focused_inactive $nord3 $nord1 $nord4 $nord0    $nord3
+client.urgent           $nord3 $nord3 $nord4 $nord0    $nord3
 
 ############################################
 # bar settings (input comes from i3blocks) #
