@@ -172,13 +172,13 @@ mode "resize" {
         bindsym l resize grow width 10 px or 10 ppt
 
 # same bindings, but for the arrow keys
-		bindsym Left resize shrink width 10 px or 10 ppt
+                bindsym Left resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
 
 # back to normal: Enter or Escape
-		bindsym Return mode "default"
+                bindsym Return mode "default"
         bindsym Escape mode "default"
 }
 
@@ -381,14 +381,6 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
 exec --no-startup-id dex --autostart --environment i3
 
-# start welcome app
-#exec --no-startup-id sh /usr/share/endeavouros/scripts/welcome --startdelay=3
-
-# num lock activated
-#exec --no-startup-id numlockx on
-# configure multiple keyboard layouts and hotkey to switch (Alt+CAPSLOCK in this example)
-#exec --no-startup-id setxkbmap -layout 'us,sk' -variant altgr-intl,qwerty -option 'grp:alt_caps_toggle'
-
 # start conky:
 #exec_always --no-startup-id conky
 
@@ -397,39 +389,17 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # start blueberry app for managing bluetooth devices from tray:
-exec --no-startup-id blueberry-tray
+# exec --no-startup-id blueberry-tray
 
-# transparency
-# uncomment one of them to be used (picom package is installed per default)
-# options could need changes, related to used GPU and drivers.
-# to find the right setting consult the archwiki or ask at the forum.
-# xcompmgr: https://wiki.archlinux.org/title/Xcompmgr
-#exec --no-startup-id xcompmgr -C -n &
-# or an more specialized config like this:
-#exec --no-startup-id xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
-# or:
-# picom: https://wiki.archlinux.org/title/Picom
-exec --no-startup-id picom &
-
-# networkmanager-applet
-exec --no-startup-id nm-applet
-
-# set wallpaper
-exec --no-startup-id nitrogen --restore
-#exec --no-startup-id feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros_i3.png
-
-# set powersavings for display:
+# not sure tbh
 exec --no-startup-id xset s 480 dpms 600 600 600
-
-# Desktop notifications
-exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
-# alternative if you installed aside with XFCE4:
-# exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 
 # Autostart apps as you like
 #exec --no-startup-id sleep 2 && xfce4-terminal
 # exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
 #exec --no-startup-id sleep 3 && thunar
+
+exec --no-startup-id bash ~/Scripts/Startup.sh
 
 # set floating (nontiling)for apps needing it
 for_window [class="Yad" instance="yad"] floating enable
@@ -490,14 +460,14 @@ client.urgent           $nord3 $nord3 $nord4 $nord0    $nord3
 # Start i3bar to display a workspace bar
 # (plus the system information i3status finds out, if available)
 bar {
-		font pango:Hack 10
-		status_command i3blocks -c ~/.config/i3/i3blocks.conf
-	    	position top
+                font pango:Hack 10
+                status_command i3blocks -c ~/.config/i3/i3blocks.conf
+                position top
 #	    	i3bar_command i3bar --transparency
 # it could be that you have no primary display set: set one (xrandr --output <output> --primary)
 # reference: https://i3wm.org/docs/userguide.html#_tray_output
-		    tray_output primary
-		    tray_padding 0
+                tray_output primary
+                tray_padding 0
 
 # When strip_workspace_numbers is set to yes,
 # any workspace that has a name of the form
@@ -505,16 +475,16 @@ bar {
 strip_workspace_numbers yes
 ##strip_workspace_name no
 
-	colors {
-		separator          $nord4
-		background         $nord1
-		statusline         $nord4
+        colors {
+                separator          $nord4
+                background         $nord1
+                statusline         $nord4
 #                          	border bg	  txt    indicator
-		focused_workspace	$nord3 $nord3 $nord4 $nord0
-		active_workspace	$nord3 $nord1 $nord4 $nord0
-		inactive_workspace	$nord3 $nord1 $nord4 $nord0
-		urgent_workspace	$nord3 $nord3 $nord4 $nord0
-	}
+                focused_workspace	$nord3 $nord3 $nord4 $nord0
+                active_workspace	$nord3 $nord1 $nord4 $nord0
+                inactive_workspace	$nord3 $nord1 $nord4 $nord0
+                urgent_workspace	$nord3 $nord3 $nord4 $nord0
+        }
 }
 
 # you can add different bars for multidisplay setups on each display:
@@ -555,7 +525,7 @@ strip_workspace_numbers yes
 ## rofi bindings fancy application menu ($mod+d /F9 optional disabled)
 
 bindsym $mod+d exec rofi -modi drun -show drun \
-		-config ~/.config/rofi/rofidmenu.rasi
+                -config ~/.config/rofi/rofidmenu.rasi
 
 #bindsym F9 exec rofi -modi drun -show drun \
 #		-config ~/.config/rofi/rofidmenu.rasi
@@ -563,7 +533,7 @@ bindsym $mod+d exec rofi -modi drun -show drun \
 ## rofi bindings for window menu ($mod+t /F10 optional disabled)
 
 bindsym $mod+t exec rofi -show window \
-		-config ~/.config/rofi/rofidmenu.rasi
+                -config ~/.config/rofi/rofidmenu.rasi
 
 #bindsym F10 exec rofi -show window \
 #		-config ~/.config/rofi/rofidmenu.rasi
