@@ -320,7 +320,7 @@ bindsym Print exec "scrot ~/%Y-%m-%d-%T-screenshot.png"
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
+set $ws1 "1:Chromium"
 set $ws2 "2"
 set $ws3 "3"
 set $ws4 "4"
@@ -340,7 +340,7 @@ set $ws16 "16"
 set $ws17 "17"
 set $ws18 "18"
 set $ws19 "19"
-set $ws20 "20"
+set $ws20 "20:Desktop"
 
 # use workspaces on different displays:
 # where you have to replace VGA-0/HDMI-0 with the names for your displays
