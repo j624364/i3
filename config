@@ -399,7 +399,8 @@ exec --no-startup-id xset s 480 dpms 600 600 600
 # exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
 #exec --no-startup-id sleep 3 && thunar
 
-exec --no-startup-id bash ~/Scripts/Startup.sh
+# exec --no-startup-id bash ~/Scripts/Startup.sh
+exec --no-startup-id slisp ~/Scripts/Startup.slisp
 
 # set floating (nontiling)for apps needing it
 for_window [class="Yad" instance="yad"] floating enable
