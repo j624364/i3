@@ -314,6 +314,10 @@ bindsym $mod+p exec /usr/local/bin/switch-audio-port
 ## App shortcuts
 bindsym Print exec "scrot ~/%Y-%m-%d-%T-screenshot.png"
 
+## Set keylayout
+bindsym ctrl+$mod+Home exec "setxkbmap gb"
+bindsym ctrl+$mod+g exec "setxkbmap el"
+
 ##########################################
 # configuration for workspace behaviour: #
 ##########################################
@@ -334,11 +338,11 @@ set $ws10 "10"
 set $ws11 "11"
 set $ws12 "12"
 set $ws13 "13"
-set $ws14 "14"
+set $ws14 "14:Discord"
 set $ws15 "15"
 set $ws16 "16"
 set $ws17 "17"
-set $ws18 "18"
+set $ws18 "18:Chromium Terminal"
 set $ws19 "19"
 set $ws20 "20:Desktop"
 
