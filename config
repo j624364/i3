@@ -317,6 +317,7 @@ bindsym Print exec "scrot ~/%Y-%m-%d-%T-screenshot.png"
 ## Set keylayout
 bindsym ctrl+$mod+Home exec "setxkbmap gb"
 bindsym ctrl+$mod+g exec "setxkbmap el"
+bindsym shift+mod1 exec ~/Scripts/SwitchKeyboardLayout.py
 
 ##########################################
 # configuration for workspace behaviour: #
